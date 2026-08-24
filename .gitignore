@@ -1,0 +1,20 @@
+# Variables de entorno y credenciales (SECRETOS)
+.env
+.env.*
+
+# Entornos virtuales
+my_env/
+venv/
+ENV/
+env/
+
+# Caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos del sistema y de editores
+.DS_Store
+.vscode/
+.idea/
