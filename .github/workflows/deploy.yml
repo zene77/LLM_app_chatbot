@@ -1,1 +1,18 @@
+name: Sync to Hugging Face Hub
 
+on:
+  push:
+    branches: [ main ] # Cambia a master si tu rama en GitHub es master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Push to hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: git push --force https://Zene77:$HF_TOKEN@huggingface.co/spaces/Zene77/mi-chatbot-flask main
+        
