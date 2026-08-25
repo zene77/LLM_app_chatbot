@@ -40,7 +40,7 @@ const sendMessage = async (message) => {
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
   async function makePostRequest(msg) {
-    const url = 'http://localhost:5000/chatbot';
+    const url = '/chatbot';
     const requestBody = { prompt: msg, message: msg };
   
     try {
